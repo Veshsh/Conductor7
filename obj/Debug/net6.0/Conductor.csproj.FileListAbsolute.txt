@@ -1,0 +1,15 @@
+C:\Users\vanaj\source\repos\Conductor\bin\Debug\net6.0\Conductor.exe
+C:\Users\vanaj\source\repos\Conductor\bin\Debug\net6.0\Conductor.deps.json
+C:\Users\vanaj\source\repos\Conductor\bin\Debug\net6.0\Conductor.runtimeconfig.json
+C:\Users\vanaj\source\repos\Conductor\bin\Debug\net6.0\Conductor.dll
+C:\Users\vanaj\source\repos\Conductor\bin\Debug\net6.0\Conductor.pdb
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.csproj.AssemblyReference.cache
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.AssemblyInfoInputs.cache
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.AssemblyInfo.cs
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.csproj.CoreCompileInputs.cache
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.dll
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\refint\Conductor.dll
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.pdb
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\Conductor.genruntimeconfig.cache
+C:\Users\vanaj\source\repos\Conductor\obj\Debug\net6.0\ref\Conductor.dll
