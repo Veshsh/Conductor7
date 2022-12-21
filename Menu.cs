@@ -5,8 +5,8 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-
+using System.IO;//ленивые твари
+//работает плохо Path.GetExtension(File1)
 namespace Conductor;
 internal static class Menu
 {
@@ -36,7 +36,6 @@ internal static class Menu
             DiskSizeList[i] = (int)(oneDisk.TotalSize/((long)Math.Pow(2,30)));
             DiskFreeSizeList[i] = (int)(oneDisk.TotalFreeSpace / ((long)Math.Pow(2, 30)));
             i++;
-            
         }
     }
     public static void MenuFolderList(ConsoleKey key)
@@ -48,13 +47,11 @@ internal static class Menu
     }
     private static void MenuFolderListGo(ConsoleKey key)
     {
-        if (key == ConsoleKey.RightArrow && "" == Path.GetExtension(FileList[YCursorPos]))
+        if (key == ConsoleKey.RightArrow && Directory.Exists(FileList[YCursorPos]))
             FilePath = FileList[YCursorPos];
         else if (key == ConsoleKey.LeftArrow)
         {
-            FilePath = FilePath.Substring(0, FilePath.LastIndexOf('\\') + 1);
-            FilePath = FilePath[..^1];//удоляем последний символ 
-                                      //брал с сайта https://metanit.com/sharp/tutorial/2.32.php?ysclid=lazrmwj6k1230636132   
+            FilePath = FilePath.Substring(0, FilePath.LastIndexOf('\\'));
             if (FilePath.Length <= 2)
                 FilePath = FilePath + "\\";//заходим в выбранный диск
         }
@@ -75,7 +72,7 @@ internal static class Menu
     {
         FileName();
         DiscriptionFileTipe();
-        DiscriptionFileList();
+        DiscriptionDiskList();
         Discription();
         Console.SetCursorPosition(0, YCursorPos);
     }
@@ -113,7 +110,7 @@ internal static class Menu
         }
 
     }
-    private static void DiscriptionFileList()
+    private static void DiscriptionDiskList()
     {
         int i = 0;
         foreach (var File1 in FileList)
@@ -132,9 +129,9 @@ internal static class Menu
         foreach (var File1 in FileList)
         {
             Console.SetCursorPosition(60, i);
-            if (Path.GetExtension(File1) != "")
+            if (File.Exists(File1))
                 Console.WriteLine("<"+Path.GetExtension(File1).Replace(".","")+">");
-            else
+            else if (Directory.Exists(File1))
                 Console.WriteLine("<DIR>");
             i++;
         }
